@@ -111,3 +111,27 @@ $red: #ff6b6b;
   scrollbar-width: thin;
   scrollbar-color: #ffd700 #1c0000;
 }
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px 15px;
+    font-size: 0.95rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    ul li {
+      .question-text {
+        font-size: 1rem;
+      }
+    }
+
+    .close-btn {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+}

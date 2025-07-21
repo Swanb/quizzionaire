@@ -80,3 +80,32 @@ button {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .completion-container {
+    width: 95%;
+    padding: 40px 10px;
+  }
+
+  .score-box {
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+  }
+
+  .score-btns-container {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+}

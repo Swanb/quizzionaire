@@ -53,3 +53,21 @@ header {
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+
+      &::before,
+      &::after {
+        font-size: 20px;
+        margin: 0 6px;
+      }
+    }
+  }
+}

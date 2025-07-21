@@ -77,3 +77,40 @@ $transition-fast: 0.3s ease-in-out;
   background-color: #fbd305;
   transition: width 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .question-container {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .next-button {
+    margin-left: unset !important;
+  }
+
+  .buttons-container {
+    position: static !important;
+    transform: none !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    button {
+      width: 90%;
+      max-width: 300px;
+      font-size: 16px;
+      padding: 10px 16px;
+    }
+  }
+
+  .progress-container {
+    width: 90%;
+    height: 15px;
+  }
+
+  .question-number {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

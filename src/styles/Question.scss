@@ -55,3 +55,26 @@ $text-glow: 0 0 5px rgba(255, 215, 0, 0.8);
     font-weight: bold;
   }
 }
+
+@media (max-width: 768px) {
+  .question {
+    padding: 10px;
+
+    .inquiry {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    fieldset {
+      padding: 0;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 16px;
+      width: 100%;
+      min-width: unset;
+      padding: 10px;
+    }
+  }
+}
