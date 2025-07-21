@@ -1,0 +1,79 @@
+$gold: #ffd700;
+$deep-red: #600000;
+$highlight-red: #a90000;
+$dark-bg: #1a0000;
+$text-glow: 0 0 5px rgba(255, 215, 0, 0.8);
+$transition-fast: 0.3s ease-in-out;
+
+.question-number {
+  margin-top: 10px;
+}
+.question-container {
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #2e0000, #1a0000);
+  border: 4px double $gold;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.buttons-container {
+  position: absolute;
+  width: 70%;
+  height: 60px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    width: 240px;
+    font-family: "Cinzel", serif;
+    color: $deep-red;
+    background-color: $gold;
+    border: none;
+    box-shadow: $text-glow;
+    cursor: pointer;
+    transition: $transition-fast;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &:disabled {
+      background-color: #aaa;
+      color: #333;
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+
+  .next-button {
+    margin-left: auto;
+  }
+}
+
+/* Progress Bar */
+.progress-container {
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #fbd305;
+  transition: width 0.3s ease-in-out;
+}

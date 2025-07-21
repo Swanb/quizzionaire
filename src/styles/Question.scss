@@ -1,0 +1,57 @@
+$gold: #ffd700;
+$deep-red: #600000;
+$highlight-red: #a90000;
+$dark-bg: #1a0000;
+$text-glow: 0 0 5px rgba(255, 215, 0, 0.8);
+
+.question {
+  padding: 10px;
+
+  .inquiry {
+    font-size: 30px;
+    font-family: "Cinzel", serif;
+    color: $gold;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: $deep-red;
+    border: 2px solid $gold;
+    border-radius: 10px;
+    font-family: "Cairo", sans-serif;
+    color: #fff7d1;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    min-width: 30%;
+
+    &:hover {
+      background-color: $highlight-red;
+      box-shadow: 0 0 10px $gold;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $highlight-red;
+    box-shadow: 0 0 15px $gold;
+    font-weight: bold;
+  }
+}

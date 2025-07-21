@@ -1,0 +1,36 @@
+$error-red: #800000;
+$gold: #ffd700;
+$dark-bg: #1a0000;
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-bg;
+
+  .error-box {
+    background: linear-gradient(145deg, $error-red 0%, #4a0000 100%);
+    padding: 40px 60px;
+    border: 4px double $gold;
+    border-radius: 16px;
+    color: $gold;
+    font-size: 28px;
+    font-family: "Cinzel", serif;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    animation: flicker 1.5s infinite alternate;
+  }
+}
+
+// Pequeno efeito dramático
+@keyframes flicker {
+  0% {
+    text-shadow: 0 0 5px $gold, 0 0 10px $gold;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 10px $gold, 0 0 20px $gold;
+    opacity: 0.85;
+  }
+}

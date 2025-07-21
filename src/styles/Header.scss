@@ -1,0 +1,55 @@
+$header-bg: #a7eeee;
+$font-title: "Bonheur Royale", cursive;
+$title-size: 56px;
+
+header {
+  background: linear-gradient(135deg, #900c3f, #c70039);
+  border-bottom: 6px double gold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  height: 90px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $font-title, cursive;
+    font-size: 72px;
+    color: #fff;
+    text-shadow: 3px 3px 0 #000, 0 0 10px gold;
+    letter-spacing: 4px;
+    position: relative;
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "★";
+      color: gold;
+      font-size: 32px;
+      margin: 0 12px;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: gold;
+    animation: sparkle 3s linear infinite;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,110 @@
+.main-title {
+  font-family: "Zen Tokyo Zoo", serif;
+  font-size: 3.2rem;
+  color: #f5d142; // tom dourado mais suave
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+  animation: subtleGlow 3s ease-in-out infinite;
+}
+
+.sub-title {
+  font-family: "Zen Tokyo Zoo", serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffcc33;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 20px;
+  padding: 20px;
+  border: 6px double gold;
+  background: radial-gradient(circle at top, #3b0a0a 0%, #1a0000 100%);
+  border-radius: 12px;
+
+  button {
+    padding: 12px 18px;
+    background-color: #600000;
+    width: 95%;
+    color: #fff7d1;
+    font-family: cursive;
+    font-size: 16px;
+    border: 3px solid gold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.3s ease-in-out;
+
+    &.selected,
+    &:hover {
+      background-color: #a90000;
+      border-color: #ffd700;
+      box-shadow: 0 0 10px #ffd700;
+    }
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  align-items: center;
+  gap: 20px;
+
+  h3 {
+    font-family: "Zen Tokyo Zoo", serif;
+    font-size: 20px;
+    color: #ffcc33;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #000;
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &.start {
+    justify-content: center;
+
+    button {
+      background-color: #ffd700;
+      color: #5c0000;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 12px 24px;
+      border: none;
+      box-shadow: 0 0 10px gold;
+      transition: transform 0.2s;
+
+      &:hover {
+        background-color: #fff2a8;
+        transform: scale(1.05);
+      }
+
+      &:disabled {
+        background-color: #b8b8b8;
+        color: #444;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@keyframes subtleGlow {
+  0%,
+  100% {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), 0 0 4px rgba(255, 223, 0, 0.3);
+  }
+  50% {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), 0 0 6px rgba(255, 223, 0, 0.9);
+  }
+}
